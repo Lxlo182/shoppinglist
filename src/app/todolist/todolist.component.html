@@ -1,0 +1,13 @@
+<section class=list-body>
+    <div class="list-title">{{title}}</div>
+    <ul class="list-elements">
+        <li class="element" *ngFor="let task of tasks">
+            <input type="checkbox" name="task" [checked]=task.done>
+            <span>{{task.name}}</span>
+        </li>
+        <li>
+            <input type="text" placeholder="Add new item..." >
+            <button (click)="addItem()">+</button>
+        </li>
+    </ul>
+</section>
